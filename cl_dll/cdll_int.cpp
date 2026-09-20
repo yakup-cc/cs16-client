@@ -79,8 +79,10 @@ static void LoadMenuInterface( void )
 		return;
 
 	g_pMenu = GetNativeMenuExports();
+
 	if( !g_pMenu )
-		HUD_MessageBox( "Error: native object \"MenuFactory\" is unavailable\n" );
+		gEngfuncs.Con_Printf( "Native 'Menu Factory' is not available");
+		//HUD_MessageBox( "Error: native object \"MenuFactory\" is unavailable\n" );
 }
 
 void InitInput (void);
